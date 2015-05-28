@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<servlet-class>servlet.WelcomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WelcomeServlet</servlet-name>
+		<url-pattern>/WelcomeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>RegisterUser</servlet-name>
+		<servlet-class>servlet.RegisterUser</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterUser</servlet-name>
+		<url-pattern>/RegisterUser</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Main</servlet-name>
+		<servlet-class>servlet.Main</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Main</servlet-name>
+		<url-pattern>/Main</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>servlet.Logout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Done</servlet-name>
+		<servlet-class>servlet.Done</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Done</servlet-name>
+		<url-pattern>/Done</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ConfirmServlet</servlet-name>
+		<servlet-class>servlet.ConfirmServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConfirmServlet</servlet-name>
+		<url-pattern>/ConfirmServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+    <servlet-name>add_linkdata</servlet-name>
+    <servlet-class>ds.AddAccountDataServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>add_linkdata</servlet-name>
+    <url-pattern>/add</url-pattern>
+</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
+	
