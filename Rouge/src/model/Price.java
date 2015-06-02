@@ -4,12 +4,19 @@
  */
 package model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author 
  */
-public class Price {
-    private int r1;
+public class Price implements Serializable {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private int r1;
     private int r2;
     private int r3;
     private int r4;
@@ -23,7 +30,7 @@ public class Price {
     private int price5;
     private int price6;
     private int sumPrice;
-    
+    private int[] rougeNum;
     
     public Price() { }
     public Price(String rouge1,String rouge2,String rouge3,String rouge4,String rouge5,String rouge6) {
@@ -45,13 +52,15 @@ public class Price {
         this.r6 = Integer.parseInt(rouge6);
         this.price6 = 12000*r6;
         
-        this.sumRouge = r1+r2+r3+r4+r5+r6;
-        this.sumPrice = price1+price2+price3+price4+price5+price6;
-        
+        this.sumRouge = r1+r2+r3+r4+r5+r6;//rougeの合計注文数
+        this.sumPrice = price1+price2+price3+price4+price5+price6;//合計のお値段
+       
+        rougeNum=new int[]{r1,r2,r3,r4,r5,r6};
         
         
     }
-    public int getRouge1() {return r1; }
+    public int getRouge(int index) {return rougeNum[index-1]; }
+    public int getRouge1(){return r1;}
     public int getPrice1() {return price1;}
     public int getRouge2() {return r2; }
     public int getPrice2() {return price2;}
@@ -65,4 +74,5 @@ public class Price {
     public int getPrice6() {return price6;}
     public int getSumRouge() {return sumRouge;}
     public int getSumPrice() {return sumPrice;}
+    public int getRougeNum() {return 6;}
 }

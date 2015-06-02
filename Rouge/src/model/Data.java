@@ -8,13 +8,19 @@ import java.io.Serializable;
 
 import javax.jdo.annotations.*;
 
+
 /**
  *
  * @author 
  */
-@SuppressWarnings("serial")
+
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Data implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private String userName;
@@ -24,7 +30,7 @@ public class Data implements Serializable{
 
     public Data(){}
     public Data(String userName,String pass){
-    	//super();
+    	super();
         this.userName = userName;
         this.pass = pass;
     }

@@ -5,14 +5,21 @@
 package servlet;
 
 import model.Login;
+
 import java.io.IOException;
 import java.io.PrintWriter;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.google.appengine.api.users.User;
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
+
 import model.LoginLogic;
 
 /**
@@ -64,8 +71,13 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+    	UserService userService = UserServiceFactory.getUserService(); 
+    	User user = userService.getCurrentUser(); 
+
+        HttpSession session = request.getSession();
+        session.setAttribute("name",user.getNickname());
         RequestDispatcher dispatcher = request.getRequestDispatcher(
-                "/WEB-INF/jsp/login.jsp");
+                "/WEB-INF/jsp/loginOK.jsp");
         dispatcher.forward(request,response);
     }
 

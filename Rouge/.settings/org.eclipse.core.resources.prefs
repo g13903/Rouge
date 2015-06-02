@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/model/Price.java=UTF-8
+encoding//src/servlet/Done.java=UTF-8
+encoding//src/servlet/HistoryServlet.java=UTF-8
 encoding//src/servlet/Main.java=UTF-8
