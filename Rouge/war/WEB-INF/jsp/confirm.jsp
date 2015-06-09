@@ -24,18 +24,19 @@
         
         <p>以下のご注文でよろしいでしょうか</p>
         
+      
         <p>CANMAKE   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= getPrice.getRouge1() %>個   <%= getPrice.getPrice1() %> 円</p>
+            <%= getPrice.getRouge(1) %>個   <%= getPrice.getRougeMulPrice(1) %> 円</p>
         <p>MAYBELLINE   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= getPrice.getRouge2() %>個   <%= getPrice.getPrice2() %> 円</p>
+            <%= getPrice.getRouge(2) %>個   <%= getPrice.getRougeMulPrice(2) %> 円</p>
         <p>ANNASUI       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= getPrice.getRouge3() %>個   <%= getPrice.getPrice3() %> 円</p>
+            <%= getPrice.getRouge(3) %>個   <%= getPrice.getRougeMulPrice(3) %> 円</p>
         <p>MAC            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= getPrice.getRouge4() %>個   <%= getPrice.getPrice4() %> 円</p>
+            <%= getPrice.getRouge(4) %>個   <%= getPrice.getRougeMulPrice(4) %> 円</p>
         <p>CHANEL         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        	<%= getPrice.getRouge5() %>個   <%= getPrice.getPrice5() %> 円</p>
+        	<%= getPrice.getRouge(5) %>個   <%= getPrice.getRougeMulPrice(5) %> 円</p>
         <p> KiSHiORiGiNAL   &nbsp;&nbsp;
-        	<%= getPrice.getRouge6() %>個   <%= getPrice.getPrice6() %> 円</p>
+        	<%= getPrice.getRouge(6) %>個   <%= getPrice.getRougeMulPrice(6) %> 円</p>
         <p>合計            <%= getPrice.getSumRouge() %>個 <%= getPrice.getSumPrice() %> 円</p>
         <a href ="/Done">決定</a>
    
