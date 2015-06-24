@@ -16,6 +16,12 @@
         <title></title>
     </head>
     <body>
+   <script>
+function double(btn){
+btn.disabled=true;
+}
+</script>
+
         <h1>注文確認</h1>
         <c:out value="${name}"/>さん、ログイン中
         <a href ="/WelcomeServlet">トップへ</a>
