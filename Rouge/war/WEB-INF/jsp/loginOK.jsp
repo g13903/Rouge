@@ -17,6 +17,7 @@
     <body>
         <p>ようこそ <c:out value="${name}"/>さん</p>
         <a href="/Main">注文画面へ</a>
+        <a href= "/HistoryServlet">注文履歴を確認</a>
         <a href="/WelcomeServlet">トップへ</a>
     </body>
 </html>
